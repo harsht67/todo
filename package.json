@@ -6,7 +6,8 @@
   "type": "module",
   "scripts": {
     "start": "node index.js",
-    "build": "cd client/ && npm install && npm run build"
+    "build": "cd client/ && npm install && npm run build",
+    "client": "cd client && npm start"
   },
   "engines": {
     "node": "^17.7.2",
