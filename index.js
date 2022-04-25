@@ -19,6 +19,7 @@ mongoose.connect(CONN_URL, {
 // mw
 app.use(express.json())
 app.use(Cors())
+app.use(express.static('client/build'))
 
 // API end points
 app.get('/', (req, res) => {
