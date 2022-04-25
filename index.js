@@ -1,8 +1,6 @@
 import express from 'express'
 import mongoose from 'mongoose'
 import Cors from 'cors'
-import path from 'path'
-import serveStatic from 'serve-static'
 
 import Todo from './dbTodo.js'
 

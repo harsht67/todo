@@ -7,27 +7,27 @@ const initialState = {
 }
 
 export const fetchTodos = createAsyncThunk('todos/fetchTodos', async () => {
-    const res = await axios.get('http://localhost:5000/todos')
+    const res = await axios.get('/api/todos')
     return res.data
 })
 
 export const addNewTodo = createAsyncThunk('todos/addNewTodo', async todo => {
-    const res = await axios.post('http://localhost:5000/todo', todo)
+    const res = await axios.post('/api/todo', todo)
     return res.data 
 })
 
 export const toggleTodo = createAsyncThunk('todos/toggleTodo', async todo => {
-    const res = await axios.put('http://localhost:5000/todo', todo)
+    const res = await axios.put('/api/todo', todo)
     return res.data 
 })
 
 export const deleteTodo = createAsyncThunk('todos/deleteTodo', async id => {
-    const res = await axios.delete('http://localhost:5000/todo/'+id)
+    const res = await axios.delete('/api/todo/'+id)
     return res.data
 })
 
 export const deleteCompletedTodos = createAsyncThunk('todos/deleteCompletedTodos', async () => {
-    const res = await axios.delete('http://localhost:5000/todos')
+    const res = await axios.delete('/api/todos')
     return res.data
 })
 
